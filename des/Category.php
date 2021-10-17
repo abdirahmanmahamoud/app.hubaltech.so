@@ -66,11 +66,7 @@ include 'bidix.php';
                             </div>
                             <div class="form-group">
                             <label for="exampleFormControlInput1" class="form-label">role</label>
-                            <select name="role" id="role" class="form-control mt-2">
-                                <option value="Subscriber">Subscriber</option>
-                                <option value="Super admin">Super admin</option>
-                                <option value="Dashboard">Dashboard</option>
-                            </select>
+                            <input type="text" name="role" id="role" class="form-control m-2" required>
                             </div>  
 
                                 

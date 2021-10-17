@@ -10,8 +10,13 @@
                 <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
             </div>
             <div class="navbar-content scroll-div">
-                <ul class="nav pcoded-inner-navbar" id="menu">
-                    
+                <ul class="nav pcoded-inner-navbar" >
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
+                        <a href="dashboard.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <ul class="nav pcoded-inner-navbar" id="menu">
+
+                    </ul>
                 </ul>
             </div>
         </div>
@@ -76,7 +81,7 @@
                                     <div class="media">
                                         <img class="img-radius" src="../images/<?php echo $_SESSION['image'];?>" style='border: 3px solid #F15D22;'>
                                         <div class="media-body">
-                                            <p><strong><?php echo $_SESSION['username'];?></strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p><strong><?php echo $_SESSION['magaca_koobad'],' ',$_SESSION['magaca_labaad'];?></strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>2021-08-12 16:37:44</span></p>
                                             <p>New ticket Added</p>
                                         </div>
                                     </div>
@@ -121,7 +126,7 @@
                                         <img class="img-radius" src="../images/<?php echo $_SESSION['image'];?>"style='border: 1px solid #F15D22;'>
                                         </div>
                                 </div>
-                                <span><?php echo $_SESSION['username'];?></span>
+                                <span><?php echo $_SESSION['magaca_koobad'],' ',$_SESSION['magaca_labaad'];?></span>
                             </div>
                             <ul class="pro-body">
                                 <li><a href="update.php" class="dropdown-item" id="profile"><i class="feather icon-user"></i> Profile</a></li>

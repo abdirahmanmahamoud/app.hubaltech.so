@@ -33,6 +33,14 @@ include 'bidix.php';
                                     <div class="alert alert-danger d-none" role="alert">
                                     This is a danger alert—check it out!
                                     </div> <div class="col-12">
+                                    <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="form-label">macaga koobaad</label>
+                                    <input type="text" name="magaca_koobad" id="magaca_koobad" class="form-control m-2 " required>
+                                </div>
+                                    <div class="form-group">
+                                            <label for="exampleFormControlInput1" class="form-label">macaga labaad</label>
+                                            <input type="text" name="magaca_labaad" id="magaca_labaad" class="form-control m-2 " required>
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlInput1" class="form-label">username</label>
                                             <input type="text" name="username" id="username" class="form-control m-2 " required>
