@@ -109,7 +109,9 @@ function all(id){
          let html ='';
          let tr = '';
          if(status){
-            $('#username').val(per[0].username);
+            $('#magaca_koobad').val(per[0].magaca_koobad); 
+            $('#magaca_labaad').val(per[0].magaca_labaad); 
+            $('#username').val(per[0].username); 
             $('#password').val(per[0].password);
             $('#id').val(per[0].id);
             $('#show').attr('src',`../images/${(per[0].image)}`);
