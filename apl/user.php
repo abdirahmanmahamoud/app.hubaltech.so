@@ -30,7 +30,7 @@ function reg($db){
     extract($_POST);
 
     if(count($er) <= 0){
-        $s = "INSERT INTO `users`(`id`, `username`, `password`,`image`) VALUES('$new_id','$username','$password','$save_name')";
+        $s = "INSERT INTO `users`(`id`, `magaca_koobad`, `magaca_labaad`, `username`, `password`,`image`) VALUES('$new_id','$magaca_koobad','$magaca_labaad','$username','$password','$save_name')";
         $r = $db->query($s);
         if($r){
             move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$save_name);
@@ -67,7 +67,7 @@ function update_user($db){
         $save_name = $id . '.png';
     
         if(count($er) <= 0){
-            $s = "UPDATE users SET username='$username',password='$password' WHERE id= '$id'";
+            $s = "UPDATE users SET magaca_koobad ='$magaca_koobad',magaca_labaad= '$magaca_labaad', username='$username',password='$password' WHERE id= '$id'";
             $r = $db->query($s);
             if($r){
                 move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$save_name);
@@ -82,7 +82,7 @@ function update_user($db){
     }
     else{
         extract($_POST);
-        $s = "UPDATE users SET username='$username',password='$password' WHERE id= '$id'";
+        $s = "UPDATE users SET magaca_koobad ='$magaca_koobad',magaca_labaad= '$magaca_labaad', username='$username',password='$password' WHERE id= '$id'";
         $r = $db -> query($s);
         if($r){
             $data = array('status' => true,'data' => 'is sax hay ayaah loo updategareey');
@@ -93,8 +93,6 @@ function update_user($db){
     }
     echo json_encode($data);
 }
-
-
 
 function delete($db){
     $data = array();
@@ -134,7 +132,7 @@ function all($db){
 function khar($db){
     $date = array();
     $mess = array();
-    $s = "SELECT `id`, `username`, `image` FROM `users` ";
+    $s = "SELECT `id`, `magaca_koobad`, `magaca_labaad`, `username`,  `image` FROM `users`";
     $r = $db->query($s);
     if($r){
         while($row = $r->fetch_assoc()){

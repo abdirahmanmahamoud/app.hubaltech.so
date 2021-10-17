@@ -10,8 +10,8 @@ if(!$_SESSION['username']){
 
 
 function update_user($db){
-    $id = $_SESSION['id'];
     extract($_POST);
+    $user_id = $_SESSION['id'];
     $data =array();
     if($_FILES['image']['name']){
         $er = array();
@@ -32,7 +32,7 @@ function update_user($db){
         $save_name = $id . '.png';
     
         if(count($er) <= 0){
-            $s = "UPDATE users SET username='$username',password='$password' WHERE id= '$id'";
+            $s = "UPDATE users SET magaca_koobad ='$magaca_koobad',magaca_labaad= '$magaca_labaad', username='$username',password='$password' WHERE id= '$user_id'";
             $r = $db->query($s);
             if($r){
                 move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$save_name);
@@ -47,7 +47,7 @@ function update_user($db){
     }
     else{
         extract($_POST);
-        $s = "UPDATE users SET username='$username',password='$password' WHERE id= '$id'";
+        $s = "UPDATE users SET magaca_koobad ='$magaca_koobad',magaca_labaad= '$magaca_labaad', username='$username',password='$password' WHERE id= '$user_id'";
         $r = $db -> query($s);
         if($r){
             $data = array('status' => true,'data' => 'is sax hay ayaah loo updategareey');

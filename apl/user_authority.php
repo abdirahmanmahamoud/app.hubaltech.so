@@ -65,7 +65,7 @@ function reg($db){
     $success = array();
     $error = array();
     $del = "DELETE FROM `user_authority` WHERE user_id = '$user_id'";
-    $db = new mysqli('localhost','hblt_cabdiraxmaan','Yaxye@12345678890','hblt_cabdiraxmaan');
+    $db = new mysqli('localhost','root','','expense');
     $delete = $db->query($del);
     if($delete){
         for($i = 0; $i < count($action_id); $i++){
